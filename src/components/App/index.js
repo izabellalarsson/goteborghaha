@@ -19,7 +19,7 @@ class App extends Component {
       .then(res => res.json())
       .then(data => 
               this.setState({
-              jokes: data[Math.floor(Math.random() * (data.length + 1) + 1)],
+              jokes: data[Math.floor(Math.random() * (data.length) + 1)],
             })
       )
   }
@@ -32,7 +32,8 @@ handleButtonClick = () => {
 render() {
   return (
     <div className="App">
-      <Jokes text={this.state.jokes.joke}/>
+      <Jokes joke={this.state.jokes ? this.state.jokes.joke : 'try again'} 
+      punchline={this.state.jokes ? this.state.jokes.punchline : 'try again'}/>
       <Button onClick={this.handleButtonClick}/>
       </div>
     );

@@ -22,6 +22,10 @@ const ButtonStyle = styled.button`
         /* background-image: linear-gradient(to right, #2B7593, #8162B7) */
     }
 
+    &:active {
+        box-shadow: inset 0 0 10px #000000;
+    }
+
     button {
         background: none;
         border:0;
