@@ -4,7 +4,7 @@
 ## Assignment
 Create a React app and fetch some API.
 
-I decided to make people laugh with some typical Göteborgs humor. The app generates jokes for you to read and/or share. With a 100% guarantee to laughter. 
+I decided to make people laugh with some typical Göteborgshumor. The app generates jokes for you to read and share among friends and enemies. With a 100% guarantee to laughter. 
 
 I made my own APi and you can find it here: [https://goteborghaha.herokuapp.com/jokes](https://goteborghaha.herokuapp.com/jokes)
 
@@ -12,7 +12,7 @@ I made my own APi and you can find it here: [https://goteborghaha.herokuapp.com/
 <b>Built in [VSCode](https://code.visualstudio.com/) with</b>
 
 APi 
-Hosted at heroku 
+- Hosted at heroku 
 - Node js
 - Express
 
