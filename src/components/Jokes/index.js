@@ -3,7 +3,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const JokeStyle =styled.div`
-  font-family: 'Yanone Kaffeesatz', sans-serif;
   color: white;
   
   h1 {
@@ -26,7 +25,7 @@ const JokeStyle =styled.div`
   opacity:0;
   animation: fadeIn ease-in 1;
   animation-fill-mode:forwards;
-  animation-duration: 5s;
+  animation-duration: .5s;
   }
 
 ` 

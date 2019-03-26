@@ -6,6 +6,7 @@ display: flex;
 justify-content: center;
 align-items: center;
 background: #E9C8F4;
+font-family: 'Yanone Kaffeesatz', sans-serif;
 }
 
 code {
