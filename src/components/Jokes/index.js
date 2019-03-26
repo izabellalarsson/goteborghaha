@@ -3,28 +3,42 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const JokeStyle =styled.div`
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  color: white;
+  
   h1 {
-    /* letter-spacing: 2pt; */
-    font-family: 'Yanone Kaffeesatz', sans-serif;
-    font-size: 2.5rem;
-    color: white;
+    font-size: 4rem;
+    letter-spacing: 6px;
+    margin-top:-30px;
   }
 
-  > h1 {
+  h2 {
+    font-size: 2.5rem;
+  }
+
+  > h2 {
     font-size: 3.5rem;
+  }
+
+  @keyframes fadeIn { from { opacity:0; } to { opacity:1; }}
+
+  .fade-in {
+  opacity:0;
+  animation: fadeIn ease-in 1;
+  animation-fill-mode:forwards;
+  animation-duration: 5s;
   }
 
 ` 
 
-
-
-
-const Jokes = ({joke, punchline}) =>  {
+const Jokes = ({joke, punchline, text, name}) =>  {
   
   return (
     <JokeStyle>
-      <h1>{joke}</h1>
-      <h1>{punchline}</h1>
+      <h2>{text}</h2>
+      <h1>{name}</h1>
+      <h2>{joke}</h2>
+      <h2 className="fade-in">{punchline}</h2>
     </JokeStyle>
   )
 }

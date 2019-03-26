@@ -7,6 +7,7 @@ class App extends Component {
 
   state = {
     jokes: [],
+    clicked: false,
   }
   componentDidMount() {
       this.fetchjokes();
@@ -27,14 +28,21 @@ class App extends Component {
 
 handleButtonClick = () => {
   this.fetchjokes();
+  this.setState({
+    clicked: true
+  })
 }
 
 render() {
+
   return (
     <div className="App">
+    {this.state.clicked ?  
       <Jokes joke={this.state.jokes ? this.state.jokes.joke : 'try again'} 
-      punchline={this.state.jokes ? this.state.jokes.punchline : 'try again'}/>
-      <Button onClick={this.handleButtonClick}/>
+      punchline={this.state.jokes ? this.state.jokes.punchline : ''}/>: <Jokes text="hello and welcome to:" name="GOTEBORGHAHA" />}
+      {/* <Jokes joke={this.state.jokes ? this.state.jokes.joke : 'try again'} 
+      punchline={this.state.jokes ? this.state.jokes.punchline : ''}/> */}
+      <Button onClick={this.handleButtonClick} />
       </div>
     );
   }
